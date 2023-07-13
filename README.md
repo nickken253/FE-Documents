@@ -1,4 +1,4 @@
-![Cover](https://github.com/nickken253/FE-Documents/assets/101244012/f5771599-19fd-4935-8b06-e81c49afb4a9)
+![Cover](https://github.com/nickken253/FE-Documents/assets/101244012/8aa5fcdb-50b4-4bc7-8bc5-b8648d24d3a8)
 
 <p align = "center">
 Tài liệu tổng hợp về Web Front-End của khóa D21 CLB Lập trình PTIT
