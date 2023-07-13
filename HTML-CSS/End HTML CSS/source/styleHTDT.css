@@ -1,0 +1,1498 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+}
+.top-banner-container-background {
+    background-color: #e073ad;
+    /* background-color: red; */
+}
+.header .top-banner-container {
+    background-color: #e073ad;
+    /* background-color: red; */
+}
+
+p #top-banner {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page {
+    min-height: 100vh;
+}
+.header-bar {
+    height: 60px;
+    align-items: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.nav-bar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+}
+
+.logo {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo/fahasa_logo.png) no-repeat center
+        center;
+    background-size: contain;
+    width: 220px;
+    height: 36px;
+}
+.see-more {
+    display: flex;
+    width: 89px;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.see-more:hover .dropdown-container {
+    display: block;
+}
+.see-more:hover .dropdown-background-dark {
+    display: block;
+}
+.search-box > input:focus+.dropdown-background-dark {
+    display: block;
+}
+.search-box > input:focus~.search-dropdown-container {
+    display: block;
+}
+#search {
+    width: 465px;
+    height: 40px;
+    padding: 0 85px 0 24px;
+    border: 1px solid #cdcfd0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 100;
+    color: #545759;
+}
+
+#search::placeholder {
+    color: #cdcfd0;
+}
+#search:focus {
+    /* border-color: red; */
+    outline: none;
+}
+.search-container {
+    padding: 10px;
+    position: relative;
+}
+.search-dropdown-container {
+    background-color: rgb(255, 255, 255);
+    display: none;
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    padding: 20px;
+    text-align: left;
+}
+.center-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popular-search {
+    padding: 10px 16px;
+    display: flex;
+    background-color: #FFF2CC;
+    border-radius: 8px;
+}
+.popular-search > a > span {
+    color: rgb(240, 45, 27);
+    font-size: 16px;
+    line-height: 24px;
+}
+.popular-search img {
+    height: 28px;
+}
+.hotkey-header {
+    /* margin-top: 20px; */
+    padding: 15px 0;
+}
+.hotkey-header-icon {
+    padding-right: 6px;
+}
+.hotkey-header .label {
+    font-weight: bold;
+}
+.hotkey-product-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 5px;
+    padding: 0 0 15px 0;
+}
+.hotkey-product-grid > a {
+    padding: 4px;
+}
+.hotkey-product-grid > a > div {
+    padding-left: 10px;
+}
+.two-line {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4em;
+    max-height: 2.8em;
+    min-height: 2.8em;
+}
+.text-left-normal {
+    font-size: 13px;
+    color: #7A7E7F;
+}
+.stretch-stretch {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+.hotkey-product-grid > a > img {
+    width: 47px;
+}
+.reload-icon {
+    background: url("https://fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_refresh_gray.svg") no-repeat center center;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+}
+.upvote-header {
+    padding: 15px 0;
+}
+.upvote-header-icon > img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+.upvote-header .label {
+    font-weight: bold;
+}
+.column-set {
+    display: flex;
+    flex-direction: column;
+}
+.upvote-product-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    padding: 0 0 15px 0;
+}
+.upvote-product-grid > a {
+    padding: 4px;
+}
+.upvote-product-grid > a > div {
+    padding-top: 10px;
+}
+.upvote-product-grid > a > img {
+    width: 56px;
+}
+.button {
+    border-radius: 8px;
+}
+
+.search-button {
+    position: absolute;
+    display: flex;
+    width: 72px;
+    height: 30px;
+    background-color: #c92127;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button > #icon-search {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-menu {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu.svg) no-repeat center center;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+}
+
+.icon-seemore {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_seemore_gray.svg) no-repeat
+        center center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+}
+.others-option {
+    display: flex;
+    justify-content: space-between;
+    width: 315px;
+    padding: 0 0 0 10px;
+    height: 100%;
+    /* height: 79px; */
+    align-items: center;
+}
+
+.others-option-container > .others-option-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.others-option-container {
+    height: 100%;
+    position: relative;
+}
+.notifi-button:hover .notifi-dropdown {
+    display: block;
+}
+.icon-notifi {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_noti_gray.svg) no-repeat center
+        center;
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+}
+.icon-notifi-dropdown {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_noti_black.svg) no-repeat center
+        center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+}
+.label-notifi-dropdown {
+    padding-left: 4px;
+    font-weight: bold;
+}
+.notifi-dropdown {
+    background-color: rgb(255, 255, 255);
+    display: none;
+    position: absolute;
+    width: 264px;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+}
+.notifi-dropdown-top {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    border-bottom: 1px solid #f2f4f5;
+}
+.notifi-dropdown-center {
+    display: flex;
+    flex-direction: column;
+    /* padding: 24px; */
+}
+.notifi-dropdown-center-image {
+    display: flex;
+    padding: 24px;
+}
+.notifi-dropdown-center-text {
+    color: #0d0e0f;
+    font-size: 1.2em;
+}
+.notifi-dropdown-center > div:nth-child(3) {
+    padding-bottom: 24px;
+}
+
+.notifi-dropdown-button {
+    display: flex;
+    border-radius: 8px;
+    padding: 0 16px 8px 16px;
+    height: auto;
+}
+.notifi-dropdown-button > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#signin-button {
+    color: #fff;
+    background-color: #c92127;
+    border: 2px solid #c92127;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+.notifi-dropdown-center > div:last-child {
+    padding-bottom: 16px;
+}
+#signup-button {
+    color: #c92127;
+    background-color: #fff;
+    border: 2px solid #c92127;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+.icon-notifi-empty {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/customer/ico_login.svg) no-repeat
+        center center;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+}
+.icon-cart {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_cart_gray.svg) no-repeat center
+        center;
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+}
+
+.icon-account {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_account_gray.svg) no-repeat center
+        center;
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+}
+.account-button:hover .account-dropdown {
+    display: block;
+}
+
+.account-dropdown {
+    background-color: rgb(255, 255, 255);
+    display: none;
+    position: absolute;
+    width: 264px;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    z-index: 1;
+}
+.account-dropdown > div:first-of-type {
+    padding: 16px 16px 8px 16px;
+}
+.account-dropdown > div:last-of-type {
+    padding: 0 16px 16px 16px;
+}
+.icon-face-signin {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo/facebook_logo.svg) no-repeat
+        center center;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+#signin-face-button {
+    color: #fff;
+    background-color: #1478fc;
+    border: 2px solid #1478fc;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+.account-button .notifi-dropdown-button:hover a > span {
+    transform: scale(1.03);
+}
+.icon-others-option {
+    margin-bottom: 6px;
+}
+.language-option-button {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #cdcfd0;
+    border-radius: 8px;
+    height: 25px;
+    padding: 8px;
+    align-items: center;
+}
+.flag {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/default.svg) no-repeat center center;
+    background-size: contain;
+    height: 24px;
+    width: 37px;
+}
+
+.label-center {
+    color: #7a7e7f;
+    font-size: 12px;
+    /* margin: 4px; */
+}
+.dropdown {
+    z-index: 999;
+}
+.dropdown-container {
+    background-color: rgb(255, 255, 255);
+    display: none;
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    padding: 24px 12px 16px 12px;
+    text-align: left;
+}
+.dropdown-background-dark {
+    background: #261E1E none repeat scroll 0% 0%;
+    opacity: 0.5;
+    position: absolute;
+    display: none;
+    width: 170vw;
+    height: calc(100vh + 300px);
+    transform: translate(-50%, 100%);
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    
+}
+.table-dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.table-dropdown > div:first-of-type {
+    width: 280px;
+}
+
+.table-dropdown > div:nth-of-type(2) {
+    width: 12px;
+    border-right: 1px solid #cdcfd0;
+}
+
+.table-dropdown > div:nth-of-type(3) {
+    width: calc(100% - 292px);
+}
+
+.parent-choices-list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.header-title.parent-title {
+    padding: 0 12px;
+    margin-bottom: 16px;
+    color: #7a7e7f;
+}
+.child-title-container {
+    display: flex;
+    padding: 0 24px;
+}
+.child-title-container .child-title {
+    display: flex;
+    padding: 0 8px;
+}
+.icon-hanhtrangdentruong {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_hanhtrangdentruong.svg)
+        no-repeat center center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+.choice {
+    display: block;
+    padding: 16px 12px 16px 12px;
+    font-weight: bold;
+    font-size: 1em;
+}
+.choice > a {
+    font-weight: bold;
+    font-size: 1em;
+    color: #000;
+}
+
+.choice:hover {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.child-container {
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    list-style: none;
+}
+ul {
+    margin: 0;
+}
+.child-title-container {
+    margin-bottom: 5px;
+}
+.child-content-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.col-md-1 {width: 8.33%;}
+.col-md-2 {width: 16.66%;}
+.col-md-3 {width: 25%;}
+.col-md-4 {width: 33.33%;}
+.col-md-5 {width: 41.66%;}
+.col-md-6 {width: 50%;}
+.col-md-7 {width: 58.33%;}
+.col-md-8 {width: 66.66%;}
+.col-md-9 {width: 75%;}
+.col-md-10 {width: 83.33%;}
+.col-md-11 {width: 91.66%;}
+.col-md-12 {width: 100%;}
+
+.child-col {
+    padding-left: 24px;
+    margin: 8px 0 8px 0;
+}
+.child-col h3 {
+    line-height: 24px;
+}
+.col-header {
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold;
+}
+.child-col-list {
+    padding: 0;
+}
+
+.child-col-list li {
+    padding: 8px 5px 0 0;
+    margin-right: 10px;
+    font-size: 13px;
+    color: #666666;
+}
+.child-col-list .see-all {
+    color: #2489f4;
+}
+.header-homepage-menu {
+    background-color: #F0F0F0;
+}
+.ads-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1230px; /* FIX */
+    margin-top: 16px;
+}
+.auto-slider-container {
+    position: relative;
+    display: flex;
+    width: calc(100% - 392px - 10px);
+    height: 320px;
+}
+.auto-slider-container > div:nth-child(3){
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 8px;
+}
+.swiper-button {
+    position: absolute;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    z-index: 10;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+    box-shadow: 0px 2px 8px #00000029;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button.prev-button {
+    left: -12px;
+}
+.icon-arrow {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_arrow_gray.svg) no-repeat center center;
+    background-size: contain;
+    width: 14px;
+    height: 14px; 
+}
+.swiper-button:hover {
+    top: 50%;
+    transform-origin: top left;
+    transform: scale(1.7) translate(-25%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+    
+}
+.swiper-button:not(:hover) {
+    top: 50%;
+    transform-origin: top left;
+    transform: scale(1) translate(0, -50%);
+    transition: all 0.3s ease-in-out 0s;
+    
+}
+.icon-arrow.right {
+    transform: rotate(-180deg);
+}
+.swiper-button.next-button {
+    right: -12px;
+}
+.auto-slider {
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    border-radius: 8px;
+}
+.slide {
+    width: 100%;
+    height: auto;
+    background-color: #ccc;
+    animation: slideAnimation 30s infinite;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    12% {
+        transform: translateX(0);
+    }
+    13% {
+        transform: translateX(-100%);
+    }
+    24.5% {
+        transform: translateX(-100%);
+    }
+    25.5% {
+        transform: translateX(-200%);
+    }
+    37% {
+        transform: translateX(-200%);
+    }
+    38% {
+        transform: translateX(-300%);
+    }
+    49.5% {
+        transform: translateX(-300%);
+    }
+    50.5% {
+        transform: translateX(-400%);
+    }
+    62% {
+        transform: translateX(-400%);
+    }
+    63% {
+        transform: translateX(-500%);
+    }
+    74.5% {
+        transform: translateX(-500%);
+    }
+    75.5% {
+        transform: translateX(-600%);
+    }
+    87% {
+        transform: translateX(-600%);
+    }
+    88% {
+        transform: translateX(-700%);
+    }
+    99.5% {
+        transform: translateX(-700%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.swiper-bullets {
+    display: flex;
+
+}
+.swiper-bullet {
+    background-color: #fff;
+}
+.header-others-ads {
+    display: flex;
+    flex-direction: column;
+    width: 392px;
+    margin-left: 8px;
+}
+.header-others-ads .others-ads-img > img {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    /* overflow: hidden; */
+    background-color: #c92127;
+}
+.header-others-ads > div:last-child > img {
+    margin-bottom: 0px;
+}
+.main-container {
+    background-color: #F0F0F0;
+    width: 100%;
+    height: auto;
+}
+.main-header-coupon-container {
+    padding-top: 20px;
+    max-width: 100%;
+}
+.coupon-row {
+    max-width: 100%;
+    position: relative;
+}
+.coupon-item-container {
+    margin-right: 10px;
+}
+#item1 {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #666666;
+    width: auto;
+    height: auto;
+}
+
+h3 {
+    margin: 0;
+}
+#top-banner {
+    max-width: 100%;
+}
+.container {
+    position: relative;
+}
+.menu-icon-bar {
+    margin-top: 15px;
+    padding: 15px 4px 15px 4px;
+    background-color: #fff;
+    text-align: center;
+}
+.menu-icon-img {
+    width: 49px;
+    height: 49px;
+}
+.menu-icon-name {
+    padding: 10px 10px 0 10px;
+    font-size: 14px;
+}
+.menu-icon-bar .col-md-3 {
+    width: 10%;
+}
+.flash-sale-bar {
+    background-color: #fff;
+    margin: 20px 0 0 0;
+    border: 1px solid #e6e6e6;
+    padding: 0;
+    display: block;
+}
+.flash-sale-header {
+    background-color: #FCDAB0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+.flash-sale-header a{
+    align-items: center;
+    display: flex;
+}
+.flash-sale-header .split{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-left: 2px solid #646464;
+    height: 20px;
+}
+.flash-sale-header .flash-sale-countdown-label{
+    font-size: 1em;
+    font-weight: 300;
+    color: #000;
+    margin-right: 10px;
+}
+.flash-sale-countdown {
+    margin: 5px 0 7px;
+}
+.flash-sale-countdown-number {
+    background-color: #fff;
+    padding: 4px 8px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.flash-sale-header-title{
+    font-weight: 550;
+    margin-left: 10px;
+    font-size: 1.31em;
+    color: #1F1D1D;
+}
+#flash-sale-icon-img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+.flash-sale-items-container {
+    padding: 0 15px;
+}
+.flash-sale-items-row {
+    margin: 10px 0 5px;
+}
+.flash-sale-items-row .col-md-3 {
+    width: 20%;
+}
+.flash-sale-item-container {
+    margin: 0 0.5em 10px 0;
+}
+.flash-sale-item-container:hover {
+    box-shadow: 0px 2px 8px #00000029;
+}
+.flash-sale-item-container {
+    position: relative;
+    padding: 0 0 10px 0;
+}
+.discount-amount-label {
+    background-color: #F7941E;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 15px;
+    z-index: 1;
+}
+.discount-sale {
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 600;
+}
+.product-image-container {
+    margin: 0 0 10px;
+    /* text-align: center; */
+    position: relative;
+    /* overflow: hidden; */
+}
+.product-image-container > .item-img {
+    position: relative;
+    /* text-align: left; */
+}
+.out-stock {
+    background: rgba(0,0,0,0.3);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.chay-hang {
+    max-height: 190px;
+}
+.product-name-container {
+    margin: 9px 0 0 0;
+    padding: 0 9px;
+}
+.product-image {
+    padding: 0.5em;
+}
+.flash-sale-img {
+    height: 190px;
+    width: 190px;
+}
+.product-name {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    text-overflow: ellipsis;
+    font-family: sans-serif;
+}
+.product-price {
+    margin: 4px 0 0 0;
+    padding: 0 10px;
+    position: relative;
+    text-align: left;
+}
+.product-price-special {
+    font-size: 1.1em;
+    color: #F7941E;
+    font-weight: 600;
+}
+.product-price-old {
+    color: #888888;
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+.episode-label {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: #92959B;
+    color: #fff;
+    padding: 0.4em 6px;
+    font-size: 11.25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    width: 50px;
+    border-radius: 4px;
+    text-align: center;
+}
+.product-sale-progress {
+    position: relative;
+    margin: 5px 10px 0;
+    border-radius: 20px;
+    margin: 5px 10px 0;
+    text-align: center;
+    background-color: rgba(210, 33, 33, 0.4);
+    height: 18px;
+    overflow: hidden;
+}
+.progress-bar {
+    background-color: #D22121;
+    transition: width .6s ease;
+    height: 100%;
+    float: left;
+}
+.progress-value {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+.progress-bar.bar-1{
+    width: 67%;
+}
+.progress-bar.bar-2{
+    width: 22%;
+}
+.progress-bar.bar-3{
+    width: 100%;
+}
+.progress-bar.bar-4{
+    width: 12%;
+}
+.progress-bar.bar-5{
+    width: 100%;
+}
+
+.flash-sale-see-more-button {
+    text-align: center;
+    margin-top: 5px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flash-sale-see-more-button a {
+    box-shadow: 2px 4px 5px #ccc;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 13px;
+    border-radius: 25px;
+    width: 200px;
+    display: inline-block;
+    background-image: linear-gradient(to right, #ff9800, #F7695D);
+}
+.flash-sale-see-more-button a:hover {
+    box-shadow: 2px 3px 15px #ccc;
+}
+.flash-sale-button-next {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fa-angle-right_32_8_8e8c8c_none.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 19px;
+    border: 1px solid #CCCCCC;
+    background-position: 3px 1px;
+    opacity: 0.7;
+    top: 50%;
+    margin-top: -16px;
+    right: -15px;
+    z-index: 2;
+    transition: all 300ms ease-in 0s;
+}
+.flash-sale-button:hover {
+    opacity: 1;
+    /* border: 1px solid red; */
+}
+.flash-sale-view-port-row {
+    position: relative;
+}
+.category-bar {
+    margin: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+}
+.category-header {
+    display: flex;
+    padding: 16px;
+}
+.center-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.center-right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category-header-icon-img {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu_red.svg) no-repeat center center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin: 0 8px 0 0;
+}
+.category-header-title {
+    font-size: 1.4em;
+    color: #212121;
+    font-weight: bold;
+}
+.diving-line {
+    width: 100%;
+    height: 1px;
+    margin: 6px 0 10px;
+    background-color: #F2F4F5;
+}
+.category-icon-bar {
+    padding: 16px;
+}
+.category-icon-bar .col-md-3 {
+    width: 10%;
+}
+.category-icon-name {
+    margin: 16px 0 0 0;
+}
+.category-icon-img {
+    width: 100px;
+    height: 100px;
+}
+.category-icon > a {
+    font-size: 1em;
+}
+.category-icon > a > .category-icon-name {
+    line-height: 1.4em;
+    min-height: 2.8em;
+    max-height: 2.8em;
+}
+.category-icon > a > .category-icon-name:hover {
+    color: #c92127;
+    transition: all 300ms ease-in 0s;
+}
+.trending-product-container {
+    position: relative;
+    padding: 0 0 10px 0;
+}
+.trending-bar {
+    background-color: #fff;
+    margin: 15px 0 0 0;
+}
+.trending-header {
+    padding: 12px 20px;
+    background-color: #FCDDEF;
+}
+.trending-header a {
+    display: flex;
+}
+.trending-header > a > img {
+    margin: 0 10px 0 0;
+}
+.trending-header-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #1F1D1D;
+}
+.trending-titles {
+    padding: 0 0 0 15px;
+}
+.trending-title-item {
+    margin: 10px 5px 5px;
+    border: 1px rgba(0,0,0,0);
+    padding: 10px 15px;
+    font-size: 14px;
+}
+.trending-title-item.active{
+    border: 1px solid #F7931E;
+    border-radius: 5px;
+    color: #F7931E;
+    font-weight: bold;
+}
+.trending-title-item:hover{
+    border: 1px solid #F7931E;
+    border-radius: 5px;
+    color: #F7931E;
+    /* font-weight: bold; */
+}
+.trending-items-row {
+    margin-bottom: 40px;
+}
+.trending-items-row > .col-md-3 {
+    width: 20%;
+}
+.trending-items-container {
+    padding: 0 15px 20px;
+}
+.product-rating {
+    height: 20px;
+    margin: 4px 0 0 0;
+}
+.ratings {
+    display: flex;
+}
+.rating-box {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_star_gray.svg) repeat-x;
+    background-size: contain;
+    margin: 0px 4px 0px 10px;
+    position: relative;
+    width: 80px;
+    height: 16px;
+    overflow: hidden;
+    float: left;
+}
+.rating {
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_star_yellow.svg) repeat-x;
+    background-size: 16px 16px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.trending-product-container .product-price-special {
+    color: #d30d14;
+    font-family: Poppins;
+}
+.trending-product-container .rating-amount {
+    color: #F7931E;
+    font-size: 14px;
+}
+.trending-button-xemthem {
+    padding-top: 10px;
+}
+.trending-button-xemthem a{
+    color: #c92127;
+    font-size: 15px;
+    font-weight: bold;
+    width: 210px;
+    border: 2px solid #C92127;
+    padding: 10px 65px;
+    border-radius: 8px;
+}
+.footer-container {
+    background-color: #F0F0F0;
+}
+.partner-slider {
+    position: relative;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px 20px;
+}
+.partner-row .col-md-3 {
+    width: calc(100% / 9);
+}
+.partner-logo {
+    width: 100%;
+}
+.parter-col {
+    margin-right: 20px;
+    width: 114px;
+}
+.partner-control-button {
+    position: absolute;
+    background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/chevron-left.svg) no-repeat center center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.partner-control-button.left{
+    opacity: 0.35;
+    left: 10px;
+}
+.partner-control-button.right{
+    right: 10px;
+    transform: rotate(-180deg);
+}
+.footer-infor {
+   
+    margin-top: 30px;
+    background-color: #F0F0F0;
+}
+.get-infor {
+    background-color: #9FA7AB;
+    padding: 14px 25px;
+    border-radius: 10px 10px 0 0 ;
+    display: flex;
+}
+.get-infor-header {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.get-infor-header-title {
+    font-family: FontAwesome;
+    font-size: 20px;
+    font-weight: 100;
+    margin-right: 5px;
+}
+.get-infor-header-lable {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 35px;
+}
+.submit-button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5px;
+}
+.submit-button button span{
+    background-color: #F7941E;
+    text-align: center;
+    padding: 10px 30px;
+    font-weight: bold;
+    background: none;
+    font-size: 14px;
+    color: #fff;
+}
+.submit-button button{
+    background-color: #F7941E;
+    border: 0px;
+    height: 35px;
+    border-radius: 4px;
+    transition: all 100ms ease-in-out 0ms;
+}
+.submit-button button:hover {
+    background-color: #C92127;
+}
+.input-text {
+    width: 500px;
+    height: 45px;
+    padding: 0 85px 0 24px;
+    border: 1px solid #cdcfd0;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: 100;
+    color: #dddddd;
+}
+.input-text::placeholder {
+    color: #CDCFD2;
+}
+.input-text:focus {
+    outline: none;
+}
+.submit-container {
+    position: relative;
+}
+.fhs-infor {
+    background-color: #fff;
+    padding: 40px 0 25px 0;
+}
+.fhs-infor > .row > .col-md-4 {
+    padding: 0 15px 0 15px;
+}
+.fhs-infor > .row > .col-md-4 > div:first-child {
+    border-right: 1px solid #cecece;
+    position: relative;
+}
+.fhs-footer-logo {
+    margin-bottom: 8px;
+    padding: 10px 15px;
+}
+.address-footer {
+    font-size: 13px;
+    padding: 0 15px;
+    line-height: 1.4em;
+}
+.app-download-icon {
+    margin-top: 15px;
+    padding-left: 5px;
+}
+.app-download-icon a img {
+    max-width: 110px;
+    margin-right: 10px;
+}
+.fhs-infor-header {
+    font-size: 16px;
+    padding-left: 10px;
+    font-weight: bold;
+    line-height: 35px;
+}
+.fhs-infor-choice a {
+    line-height: 35px;
+    padding-left: 10px;
+    color: #000;
+    transition: all 300ms ease-in 0s;
+}
+.fhs-infor-choice a:hover {
+    padding-left: 25px;
+    color: #EA7696;
+}
+.fhs-infor > .row > .col-md-8 {
+    padding: 0 15px 0 15px;
+}
+.fhs-infor-footer-title {
+    margin-top: 15px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-weight: bold;
+    line-height: 35px;
+}
+.col-md-8 .contact  {
+    margin: 5px -5px;
+    padding-left: 13px;
+} 
+.col-md-8 .row .col-md-4 {
+    padding: 0 15px 0 0;
+} 
+.col-md-8 .row span {
+    font-size: 13px;
+} 
+.delivery-logo-row {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 810px;
+    margin-top: 25px;
+    /* column-gap: 25px; */
+}
+.delivery-logo-row > .col-md-3 {
+    width: 20%;
+    /* margin: 0 25px; */
+}
+.delivery-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
+}
+.delivery-logo > img {
+    width: 100%;
+    margin: 0 25px;
+    
+}
+.fhs-infor > .row:last-child  {
+    text-align: center;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+.fhs-infor > .row:last-child > div {
+    color: #adadad;
+    padding-left: 14px;
+    font-size: 13px;
+}
+.chat-helper {
+    position: fixed;
+    background: #f1f1f1;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    width: 60px;
+    height: 60px;
+    right: 0px;
+    bottom: 0px;
+    margin: 20px;
+    z-index: 9999;
+    
+}
+.chat-helper > img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+.aside-bar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color: #7A7E7F;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+.aside-bar-content {
+    display: none;
+    height: 100%;
+    width: 400px;
+    box-shadow: 0 0 10px 2px #6c6c78;
+    background-color: #fff;
+}
+.aside-bar-content-items {
+    height: 100%;
+}
+.aside-bar-content-items-grid {
+    overflow-y: scroll;
+    height: calc(100% - 80px);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1230px;
+    }
+}
+.no-margin-right-important {
+    margin-right: 0 !important
+}
+
