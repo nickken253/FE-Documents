@@ -15,7 +15,9 @@ Tài liệu tổng hợp về Web Front-End của khóa D21 CLB Lập trình PTI
 - Lý thuyết cơ bản về CSS #1: [Web FE - CSS - P1](https://github.com/nickken253/FE-Documents/tree/main/HTML-CSS/Buoi2)
 - Lý thuyết cơ bản về CSS #2: [Web FE - CSS - P2](https://github.com/nickken253/FE-Documents/tree/main/HTML-CSS/Buoi3)
 - Bài tập cuối khóa HTML-CSS: [Web FE - HTML-CSS - Final](https://github.com/nickken253/FE-Documents/tree/main/HTML-CSS/End%20HTML%20CSS)
-- Lý thuyết JavaScript #1: [Web FE - JS - P1](https://github.com/nickken253/FE-Documents/tree/main/JavaScript/JS-Buoi1)
+- Lý thuyết JavaScript #1: [Web FE - JS - P1](https://github.com/nickken253/FE-Documents/tree/main/JavaScript#js-bu%E1%BB%95i-1)
+- Lý thuyết JavaScript #2 - ES6: [Web FE - JS - P2](https://github.com/nickken253/FE-Documents/tree/main/JavaScript#js-bu%E1%BB%95i-2---t%C3%ACm-hi%E1%BB%83u-v%E1%BB%81-js-es6)
+- Lý thuyết JavaScript #3 - DOM: [Web FE - JS - P3](https://github.com/nickken253/FE-Documents/tree/main/JavaScript#js-bu%E1%BB%95i-3---dom)
 <hr>
 
 ## 💖 Hỗ trợ
