@@ -2,6 +2,8 @@
 
 ---
 
+## JS BUỔI 1
+
 - **Khai báo dữ liệu**
     - **Kiểu dữ liệu**
         - String: Strings are written with quotes. You can use single or double quotes.
@@ -61,7 +63,13 @@
             - Automatically
             - Using `var`
             - Using `let` : có thể thay đổi giá trị, nhưng không thể khai báo lại.
-            - Using `const` : hằng số.
+            - Using `const` : hằng số. (có 2 kiểu const thường và const luôn đúng)
+                
+                ```jsx
+                const myBirthDay = "25.08.2003";
+                const PI
+                ```
+                
         - **Lưu ý**
             - The `let` and `const` keywords were added to JavaScript in 2015.
             - The `var` keyword should only be used in code written for older browsers.
@@ -368,6 +376,17 @@
             - `Array filter()`
                 
                 ```jsx
+                array.filter(function(element, index, array) {
+                  // Điều kiện lọc
+                });
+                
+                // `array` là mảng gốc mà bạn muốn lọc các phần tử từ.
+                // `element` là phần tử hiện tại đang được lọc trong quá trình lặp qua mảng.
+                // `index` là chỉ mục của `element` trong mảng.
+                // `array` là chính mảng gốc mà bạn đang lọc.
+                ```
+                
+                ```jsx
                 const numbers = [45, 4, 9, 16, 25];
                 const over18 = numbers.filter(myFunction);
                 
@@ -380,6 +399,13 @@
             - `Array reduce()`
                 
                 ```jsx
+                array.reduce(callback, initialValue);
+                // `array`: Mảng ban đầu.
+                // `callback`: Một hàm callback được gọi cho từng phần tử trong mảng, có thể nhận vào bốn tham số: accumulator (biến trung gian), currentValue (giá trị hiện tại đang được xử lý), currentIndex (chỉ số hiện tại), và array (mảng đang được reduce).
+                // `initialValue` (tùy chọn): Giá trị khởi tạo ban đầu của biến trung gian (accumulator). Nếu không được chỉ định, phần tử đầu tiên của mảng sẽ được sử dụng làm giá trị khởi tạo.
+                ```
+                
+                ```jsx
                 const numbers = [45, 4, 9, 16, 25];
                 let sum = numbers.reduce(myFunction);
                 
@@ -387,6 +413,21 @@
                   return total + value;
                 }
                 // 99
+                ```
+                
+            - `Array indexOf()`
+                - Là một phương thức của một mảng trong JavaScript, được sử dụng để tìm kiếm và trả về chỉ mục (vị trí) đầu tiên mà phần tử **`value`** xuất hiện trong mảng.
+                
+                ```jsx
+                const numbers = [45, 4, 9, 45, 25];
+                numbers.indexOf(45);
+                // 0
+                ```
+                
+            - `Array forEach()`
+                
+                ```jsx
+                array.forEach(callback(currentValue, index, array), thisArg)
                 ```
                 
     - **Object**
@@ -415,6 +456,7 @@
     - **Lưu ý**
         - When a JavaScript variable is declared with the keyword "`new`", the variable is created as an object. Avoid `String`, `Number`, and `Boolean` objects. They complicate your code and slow down execution speed.
         - Trong JavaScript, mảng sử dụng các chỉ mục được đánh số. Còn, các đối tượng sử dụng các chỉ mục được đặt tên.
+        - Const Object có thể thay đổi các properties của nó được, chứ không thể gán 1 object mới được. Vì const sẽ lưu lại địa chỉ của nó.
         - How to Recognize an Array ? The problem is that the JavaScript operator `typeof` returns "`object`":
         
         ```jsx
@@ -687,3 +729,172 @@
             const fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits.includes("Banana", 3);
             ```
+            
+
+---
+
+## JS BUỔI 2 - Tìm hiểu về JS ES6
+
+- **Từ khóa let, const**
+    - The `let` keyword allows you to declare a variable with block scope.
+    - The `const` keyword allows you to declare a constant (a JavaScript variable with a constant value). Constants are similar to let variables, except that the value cannot be changed.
+    
+    ```jsx
+    var x = 10;
+    // Here x is 10
+    {
+      let x = 2;
+      // Here x is 2
+    }
+    // Here x is 10
+    ```
+    
+- **Arrow function**
+    - Arrow functions allows a short syntax for writing function expressions. You don't need the `function` keyword, the `return` keyword, and the **curly brackets**.
+    
+    ```jsx
+    // ES5
+    var x = function(x, y) {
+       return x * y;
+    }
+    
+    // ES6
+    const x = (x, y) => x * y;
+    ```
+    
+    - Arrow functions do not have their own `this`. They are not well suited for defining **object methods**.
+    - Arrow functions are not hoisted (tức là không được đưa lên đầu phạm vi). They must be defined **before** they are used.
+    
+    ```jsx
+    // Arrow function được định nghĩa trước khi sử dụng
+    const calculate = (a, b) => a + b;
+    const result = calculate(5, 10);
+    console.log(result);
+    ```
+    
+    ```jsx
+    // Arrow function không được định nghĩa trước khi sử dụng
+    const result = calculate(5, 10); // Lỗi: calculate is not a function
+    const calculate = (a, b) => a + b;
+    ```
+    
+- **Template literals - Template strings**
+    - cho phép bạn tạo ra chuỗi với cú pháp linh hoạt và thêm biểu thức hoặc giá trị vào trong chuỗi một cách dễ dàng.
+    - Template literals được bao quanh bởi cặp dấu backtick (`` ``) thay vì dấu nháy đơn (`' '`) hoặc nháy kép (`" "`). Bên trong template literals, bạn có thể sử dụng các biểu thức JavaScript và các biến bằng cách sử dụng cú pháp `${expression}`.
+    - Template literals cho phép bạn tạo ra các chuỗi phức tạp và tùy chỉnh một cách dễ dàng, làm cho mã JavaScript trở nên dễ đọc và dễ hiểu hơn so với việc sử dụng chuỗi thông thường.
+    
+    ```jsx
+    const name = 'John';
+    const age = 30;
+    
+    // Sử dụng template literals
+    const greeting = `Xin chào, tôi là ${name} và tôi ${age} tuổi.`;
+    
+    console.log(greeting);
+    // Output: Xin chào, tôi là John và tôi 30 tuổi.
+    ```
+    
+- **Destructuring**
+    - Cho phép bạn trích xuất các giá trị từ một đối tượng hoặc mảng và gán chúng vào các biến riêng lẻ một cách thuận tiện.
+    - Khi sử dụng destructuring, bạn có thể chỉ định các biến mới và gán giá trị tương ứng từ đối tượng hoặc mảng nguồn một cách ngắn gọn.
+    
+    ```jsx
+    const person = { name: 'John', age: 30 };
+    
+    const { name, age } = person;
+    
+    console.log(name); // Output: John
+    console.log(age); // Output: 30
+    ```
+    
+    ```jsx
+    const numbers = [1, 2, 3, 4, 5];
+    
+    const [first, second, ...rest] = numbers;
+    
+    console.log(first); // Output: 1
+    console.log(second); // Output: 2
+    console.log(rest); // Output: [3, 4, 5]
+    ```
+    
+- **Spread**
+    - The `...` operator expands an iterable (like an array) into more elements.
+    - The `...` operator can be used to expand an iterable into more arguments for function calls.
+    - Khi sử dụng toán tử **`...`** trên một mảng, nó được gọi là "spread operator" và có thể được sử dụng để sao chép mảng, kết hợp các mảng lại với nhau, hoặc truyền các phần tử của mảng vào một hàm theo dạng các đối số riêng biệt.
+    
+    ```jsx
+    const numbers = [1, 2, 3, 4, 5];
+    const copiedNumbers = [...numbers]; // Sao chép mảng
+    
+    const moreNumbers = [6, 7, 8];
+    const combinedNumbers = [...numbers, ...moreNumbers]; // Kết hợp các mảng
+    
+    function sum(a, b, c) {
+      return a + b + c;
+    }
+    
+    const result = sum(...numbers); // Truyền các phần tử của mảng vào hàm
+    ```
+    
+    - Khi sử dụng toán tử `...` trên một đối tượng, nó được gọi là "rest operator" và có thể được sử dụng để lấy các thuộc tính của đối tượng vào một đối tượng mới hoặc lấy các tham số còn lại của một hàm vào một mảng.
+    
+    ```jsx
+    const person = {
+      name: 'John',
+      age: 30,
+      country: 'USA'
+    };
+    
+    const { name, ...rest } = person; // Lấy thuộc tính name và các thuộc tính còn lại vào đối tượng rest
+    
+    function printInfo(name, ...details) {
+      console.log(`Name: ${name}`);
+      console.log(`Details: ${details}`);
+    }
+    
+    printInfo('John', '30', 'USA'); // Lấy các tham số còn lại vào một mảng details
+    
+    // Output 
+    // 
+    // Name: John
+    // Details: 30,USA
+    ```
+    
+
+---
+
+## JS BUỔI 3 - DOM
+
+- **HTML DOM**
+    - Khi một trang web được tải, trình duyệt tạo ra một Document Object Model (DOM) của trang đó.
+    - Mô hình DOM HTML được xây dựng dưới dạng một cây các đối tượng
+        
+        ![**The HTML DOM Tree of Objects**](Web%20FE%20-%20JavaScript%20d7e9c1df5ea64fd3ae72a90c9fda51c7/Untitled.png)
+        
+        **The HTML DOM Tree of Objects**
+        
+    - DOM HTML là một mô hình đối tượng và giao diện lập trình tiêu chuẩn cho HTML. Nó xác định:
+        - Các phần tử HTML như các đối tượng.
+        - Các thuộc tính của tất cả các phần tử HTML.
+        - Các phương thức để truy cập vào tất cả các phần tử HTML.
+        - Các sự kiện cho tất cả các phần tử HTML.
+        
+        Nói cách khác: DOM HTML là một tiêu chuẩn cho cách lấy, thay đổi, thêm hoặc xóa các phần tử HTML.
+        
+- **DOM API (DOM Methods)**
+    - DOM API cung cấp các phương thức như:
+        - `document.getElementById()`: Trả về phần tử có id tương ứng.
+        - `document.querySelector()`: Trả về phần tử đầu tiên khớp với selector CSS được chỉ định.
+        - `document.createElement()`: Tạo một phần tử HTML mới.
+        - `element.appendChild()`: Thêm một phần tử con vào phần tử hiện tại.
+        - `element.innerHTML`: Truy cập hoặc thiết lập nội dung HTML của một phần tử.
+        - `element.addEventListener()`: Đăng ký một hàm xử lý sự kiện cho một phần tử.
+        - `element.style`: Truy cập hoặc thiết lập các thuộc tính CSS của một phần tử.
+- DOM Document Object
+- DOM Attribute
+- DOM CSS
+- DOM Event
+- InnerText, textContent, InnerHTML
+- PreventDefault & StopPropagation
+- Get element methods
+- Event listener
