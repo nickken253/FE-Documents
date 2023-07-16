@@ -869,7 +869,7 @@
     - Khi một trang web được tải, trình duyệt tạo ra một Document Object Model (DOM) của trang đó.
     - Mô hình DOM HTML được xây dựng dưới dạng một cây các đối tượng
         
-        ![**The HTML DOM Tree of Objects**](Web%20FE%20-%20JavaScript%20d7e9c1df5ea64fd3ae72a90c9fda51c7/Untitled.png)
+        ![**The HTML DOM Tree of Objects**](asset/Untitled.png)
         
         **The HTML DOM Tree of Objects**
         
